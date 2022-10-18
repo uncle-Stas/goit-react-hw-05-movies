@@ -9,7 +9,6 @@ export async function getTrandingMovies() {
       `${BASE_URL}/trending/movie/day?api_key=${API_KEY}`
     );
     const trandMovies = await response.data;
-    console.log('trandMovies: ', trandMovies);
 
     return trandMovies;
   } catch (error) {
@@ -37,7 +36,6 @@ export async function getMovieById(id) {
       `${BASE_URL}/movie/${id}?api_key=${API_KEY}`
     );
     const movie = await response.data;
-    console.log('movie: ', movie);
 
     return movie;
   } catch (error) {
