@@ -1,5 +1,6 @@
 //
 
+import Section from 'Components/Section/Section';
 import { getMovieById } from 'Services/movieApi';
 
 const MoviesPage = () => {
@@ -7,9 +8,11 @@ const MoviesPage = () => {
   console.log('movie: ', movie);
 
   return (
-    <>
-      <p>poka</p>
-    </>
+    <main>
+      <Section>
+        <p>poka</p>
+      </Section>
+    </main>
   );
 };
 
