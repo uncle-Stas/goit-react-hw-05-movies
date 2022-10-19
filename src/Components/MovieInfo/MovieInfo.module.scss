@@ -1,0 +1,28 @@
+.flexWrapper {
+  display: flex;
+  gap: 20px;
+
+  @media screen and (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.title {
+  margin-bottom: 25px;
+}
+
+.rating {
+  margin-bottom: 20px;
+}
+
+.overview {
+  margin-bottom: 20px;
+}
+
+.additionInfo {
+  padding-top: 15px;
+  margin-top: 10px;
+  border-top: 2px solid red;
+  border-bottom: 2px solid red;
+}

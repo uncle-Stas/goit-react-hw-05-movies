@@ -6,7 +6,7 @@ import MoviesList from 'Components/MoviesList/MoviesList';
 import { useEffect, useState } from 'react';
 import { getTrandingMovies } from 'Services/movieApi';
 
-const HomePage = () => {
+const Home = () => {
   const [moviesArr, setMoviesArr] = useState(null);
 
   useEffect(() => {
@@ -30,4 +30,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Home;

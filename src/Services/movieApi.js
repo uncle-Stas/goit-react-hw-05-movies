@@ -49,7 +49,6 @@ export async function getMovieActors(id) {
       `${BASE_URL}/movie/${id}/credits?api_key=${API_KEY}`
     );
     const actors = await response.data;
-    console.log('actors: ', actors);
 
     return actors;
   } catch (error) {
@@ -63,7 +62,6 @@ export async function getMovieReviews(id) {
       `${BASE_URL}/movie/${id}/reviews?api_key=${API_KEY}`
     );
     const reviews = await response.data;
-    console.log('reviews: ', reviews);
 
     return reviews;
   } catch (error) {

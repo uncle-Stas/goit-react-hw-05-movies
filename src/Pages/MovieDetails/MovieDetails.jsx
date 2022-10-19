@@ -18,7 +18,9 @@ const MovieDetails = () => {
 
   return (
     <main>
-      <Section>{movie && <MovieInfo movie={movie} />}</Section>
+      <Section>
+        {movie === null ? <b>...Loading</b> : <MovieInfo movie={movie} />}
+      </Section>
     </main>
   );
 };
