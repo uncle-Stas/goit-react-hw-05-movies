@@ -6,7 +6,7 @@ const MovieItem = ({ movie }) => {
 
   return (
     <li>
-      <Link to={`movies/${id}`}>{title}</Link>
+      <Link to={`/movies/${id}`}>{title}</Link>
     </li>
   );
 };

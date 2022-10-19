@@ -8,7 +8,7 @@ const Header = () => {
       <div className={scss.container}>
         <nav>
           <Link to="/">Home</Link>
-          <Link to="movies">Movie</Link>
+          <Link to="/movies">Movie</Link>
         </nav>
       </div>
     </header>
