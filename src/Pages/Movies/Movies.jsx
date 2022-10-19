@@ -37,18 +37,11 @@ const Movies = () => {
       .catch(error => console.log(error));
   }, [searchParamsQ]);
 
-  console.log('query: ', query);
-  console.log('qsearchParamsQ: ', searchParamsQ);
-  console.log('moviesArr: ', moviesArr);
   return (
     <main>
       <Section>
         <SearchForm onSubmit={handleSubmit} />
-        {moviesArr === null ? (
-          <p>Input search query</p>
-        ) : (
-          <MoviesList movies={moviesArr} />
-        )}
+        {moviesArr && <MoviesList movies={moviesArr} />}
       </Section>
     </main>
   );

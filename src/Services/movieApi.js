@@ -22,7 +22,6 @@ export async function getMoviesByQuery(query) {
       `${BASE_URL}/search/movie?api_key=${API_KEY}&query=${query}`
     );
     const queryMovies = await response.data;
-    console.log('queryMovies: ', queryMovies);
 
     return queryMovies;
   } catch (error) {

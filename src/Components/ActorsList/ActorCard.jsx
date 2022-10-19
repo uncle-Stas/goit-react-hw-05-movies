@@ -15,7 +15,7 @@ const ActorCard = ({ actor }) => {
         <p>No Photo</p>
       )}
       <p>
-        character: <b>{character}</b>
+        Character: <b>{character}</b>
       </p>
     </li>
   );

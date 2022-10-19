@@ -1,15 +1,14 @@
 //
 
-import MovieItem from 'Components/MovieItem/MovieItem';
+import MovieItem from './MovieItem';
 
 const MoviesList = ({ movies }) => {
-  // console.log('movies: ', movies);
   return (
-    <ol>
+    <ul>
       {movies.map(movie => (
         <MovieItem key={movie.id} movie={movie} />
       ))}
-    </ol>
+    </ul>
   );
 };
 
