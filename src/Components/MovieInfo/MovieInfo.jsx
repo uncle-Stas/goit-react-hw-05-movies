@@ -1,4 +1,5 @@
 import scss from './MovieInfo.module.scss';
+import PropTypes from 'prop-types';
 
 import { Link, Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
@@ -51,3 +52,16 @@ const MovieInfo = ({ movie }) => {
 };
 
 export default MovieInfo;
+
+// --------------------------- PropTypes ----------------------
+
+MovieInfo.propTypes = {
+  movie: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    genres: PropTypes.array.isRequired,
+    poster_path: PropTypes.string,
+    overview: PropTypes.string.isRequired,
+    vote_average: PropTypes.number.isRequired,
+    release_date: PropTypes.string.isRequired,
+  }),
+};

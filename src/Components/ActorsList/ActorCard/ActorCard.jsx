@@ -1,4 +1,5 @@
 import scss from './ActorCard.module.scss';
+import PropTypes from 'prop-types';
 
 const ActorCard = ({ actor }) => {
   const { name, profile_path, character } = actor;
@@ -22,3 +23,13 @@ const ActorCard = ({ actor }) => {
 };
 
 export default ActorCard;
+
+// --------------------------- PropTypes ----------------------
+
+ActorCard.propTypes = {
+  actor: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    profile_path: PropTypes.string,
+    character: PropTypes.string.isRequired,
+  }),
+};

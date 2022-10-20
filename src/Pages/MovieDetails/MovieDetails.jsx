@@ -17,8 +17,10 @@ const MovieDetails = () => {
   return (
     <main>
       <Section>
-        <ButtonBack />
-        {movie === null ? <p>Loading...</p> : <MovieInfo movie={movie} />}
+        <>
+          <ButtonBack />
+          {movie === null ? <p>Loading...</p> : <MovieInfo movie={movie} />}
+        </>
       </Section>
     </main>
   );

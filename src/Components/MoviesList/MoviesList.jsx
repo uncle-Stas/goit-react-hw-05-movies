@@ -1,4 +1,5 @@
 import scss from './MoviesList.module.scss';
+import PropTypes from 'prop-types';
 
 import MovieItem from './MovieItem/MovieItem';
 
@@ -13,3 +14,15 @@ const MoviesList = ({ movies }) => {
 };
 
 export default MoviesList;
+
+// --------------------------- PropTypes ----------------------
+
+MoviesList.propTypes = {
+  movies: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
+      poster_path: PropTypes.string,
+    })
+  ),
+};

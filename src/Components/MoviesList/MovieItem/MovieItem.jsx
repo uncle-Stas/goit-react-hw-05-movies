@@ -1,4 +1,5 @@
 import scss from './MovieItem.module.scss';
+import PropTypes from 'prop-types';
 
 import { Link } from 'react-router-dom';
 
@@ -21,3 +22,13 @@ const MovieItem = ({ movie }) => {
 };
 
 export default MovieItem;
+
+// --------------------------- PropTypes ----------------------
+
+MovieItem.propTypes = {
+  movie: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+    poster_path: PropTypes.string,
+  }),
+};

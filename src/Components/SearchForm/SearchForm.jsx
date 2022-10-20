@@ -1,4 +1,5 @@
 import scss from './SearchForm.module.scss';
+import PropTypes from 'prop-types';
 
 const SearchForm = ({ onSubmit }) => {
   const handleSubmit = event => {
@@ -28,3 +29,9 @@ const SearchForm = ({ onSubmit }) => {
 };
 
 export default SearchForm;
+
+// --------------------------- PropTypes ----------------------
+
+SearchForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};

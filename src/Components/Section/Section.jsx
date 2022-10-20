@@ -1,4 +1,5 @@
 import scss from './Section.module.scss';
+import PropTypes from 'prop-types';
 
 const Section = ({ children }) => {
   return (
@@ -9,3 +10,9 @@ const Section = ({ children }) => {
 };
 
 export default Section;
+
+// --------------------------- PropTypes ----------------------
+
+Section.propTypes = {
+  children: PropTypes.element.isRequired,
+};

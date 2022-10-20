@@ -40,8 +40,10 @@ const Movies = () => {
   return (
     <main>
       <Section>
-        <SearchForm onSubmit={handleSubmit} />
-        {moviesArr && <MoviesList movies={moviesArr} />}
+        <>
+          <SearchForm onSubmit={handleSubmit} />
+          {moviesArr && <MoviesList movies={moviesArr} />}
+        </>
       </Section>
     </main>
   );

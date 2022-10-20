@@ -1,6 +1,5 @@
-//
-
-import ReviewItem from './ReviewItem';
+import PropTypes from 'prop-types';
+import ReviewItem from './ReviewItem/ReviewItem';
 
 const ReviewsList = ({ reviewsArr }) => {
   const reviewsArrLength = reviewsArr.length;
@@ -21,3 +20,15 @@ const ReviewsList = ({ reviewsArr }) => {
 };
 
 export default ReviewsList;
+
+// --------------------------- PropTypes ----------------------
+
+ReviewsList.propTypes = {
+  reviewsArr: PropTypes.arrayOf(
+    PropTypes.shape({
+      author: PropTypes.string.isRequired,
+      content: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
+    })
+  ),
+};

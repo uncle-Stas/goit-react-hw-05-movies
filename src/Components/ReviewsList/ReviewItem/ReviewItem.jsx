@@ -1,4 +1,5 @@
 import scss from './ReviewItem.module.scss';
+import PropTypes from 'prop-types';
 
 const ReviewItem = ({ review }) => {
   const { author, content } = review;
@@ -12,3 +13,12 @@ const ReviewItem = ({ review }) => {
 };
 
 export default ReviewItem;
+
+// --------------------------- PropTypes ----------------------
+
+ReviewItem.propTypes = {
+  review: PropTypes.shape({
+    author: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
+  }),
+};

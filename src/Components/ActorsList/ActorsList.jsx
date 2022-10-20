@@ -1,4 +1,5 @@
 import scss from './ActorsList.module.scss';
+import PropTypes from 'prop-types';
 
 import ActorCard from './ActorCard/ActorCard';
 
@@ -21,3 +22,16 @@ const ActorsList = ({ actorsArr }) => {
 };
 
 export default ActorsList;
+
+// --------------------------- PropTypes ----------------------
+
+ActorsList.propType = {
+  actorsArr: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      profile_path: PropTypes.string,
+      character: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
+    })
+  ),
+};
