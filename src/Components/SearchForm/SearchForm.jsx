@@ -8,7 +8,7 @@ const SearchForm = ({ onSubmit }) => {
     const query = event.target.query.value;
     onSubmit(query.toLowerCase());
 
-    event.target.reset();
+    // event.target.reset();
   };
 
   return (

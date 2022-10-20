@@ -1,5 +1,3 @@
-//
-
 import MoviesList from 'Components/MoviesList/MoviesList';
 import SearchForm from 'Components/SearchForm/SearchForm';
 import Section from 'Components/Section/Section';
@@ -42,7 +40,7 @@ const Movies = () => {
       <Section>
         <>
           <SearchForm onSubmit={handleSubmit} />
-          {moviesArr && <MoviesList movies={moviesArr} />}
+          {moviesArr && <MoviesList movies={moviesArr} query={query} />}
         </>
       </Section>
     </main>

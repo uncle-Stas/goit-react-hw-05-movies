@@ -1,25 +1,33 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import { getMovieById } from 'Services/movieApi';
 
 import Section from 'Components/Section/Section';
 import MovieInfo from 'Components/MovieInfo/MovieInfo';
-import ButtonBack from 'Components/ButtonBack/ButtonBack';
 
 const MovieDetails = () => {
   const [movie, setMovie] = useState(null);
   const { movieId } = useParams();
+  const location = useLocation();
+  const back = location.state?.from ?? '/';
 
   useEffect(() => {
-    getMovieById(movieId).then(response => setMovie(response));
+    getMovieById(movieId)
+      .then(response => {
+        return setMovie(response);
+      })
+      .catch(error => console.log(error));
   }, [movieId]);
 
   return (
     <main>
       <Section>
         <>
-          <ButtonBack />
-          {movie === null ? <p>Loading...</p> : <MovieInfo movie={movie} />}
+          {movie === null ? (
+            <p>Loading...</p>
+          ) : (
+            <MovieInfo movie={movie} forBtnBack={back} />
+          )}
         </>
       </Section>
     </main>

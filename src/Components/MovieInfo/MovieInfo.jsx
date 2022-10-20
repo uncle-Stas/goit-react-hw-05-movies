@@ -3,14 +3,21 @@ import PropTypes from 'prop-types';
 
 import { Link, Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
+import ErrorPage from 'Pages/ErrorPage/ErrorPage';
+import ButtonBack from 'Components/ButtonBack/ButtonBack';
 
-const MovieInfo = ({ movie }) => {
+const MovieInfo = ({ movie, forBtnBack }) => {
+  if (!movie) {
+    return <ErrorPage />;
+  }
+
   const { title, genres, poster_path, overview, vote_average, release_date } =
     movie;
 
   const genresString = genres.map(genre => genre.name).join(' ');
   return (
     <>
+      <ButtonBack location={forBtnBack} />
       <div className={scss.flexWrapper}>
         <img
           src={`https://image.tmdb.org/t/p/w300${poster_path}`}
@@ -64,4 +71,5 @@ MovieInfo.propTypes = {
     vote_average: PropTypes.number.isRequired,
     release_date: PropTypes.string.isRequired,
   }),
+  forBtnBack: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 };

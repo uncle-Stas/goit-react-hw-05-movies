@@ -3,13 +3,24 @@ import PropTypes from 'prop-types';
 
 import MovieItem from './MovieItem/MovieItem';
 
-const MoviesList = ({ movies }) => {
+const MoviesList = ({ movies, query }) => {
+  const moviesLength = movies.length;
+
   return (
-    <ul className={scss.list}>
-      {movies.map(movie => (
-        <MovieItem key={movie.id} movie={movie} />
-      ))}
-    </ul>
+    <>
+      {!moviesLength ? (
+        <p>
+          According to your request <b>{query}</b> nothing was found. Please try
+          again.
+        </p>
+      ) : (
+        <ul className={scss.list}>
+          {movies.map(movie => (
+            <MovieItem key={movie.id} movie={movie} />
+          ))}
+        </ul>
+      )}
+    </>
   );
 };
 
@@ -25,4 +36,5 @@ MoviesList.propTypes = {
       poster_path: PropTypes.string,
     })
   ),
+  query: PropTypes.string,
 };

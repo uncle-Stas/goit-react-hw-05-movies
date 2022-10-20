@@ -1,12 +1,13 @@
 import scss from './ButtonBack.module.scss';
+import PropTypes from 'prop-types';
 
 import { useNavigate } from 'react-router-dom';
 
-const ButtonBack = () => {
+const ButtonBack = ({ location }) => {
   const navigate = useNavigate();
 
   const goBack = () => {
-    navigate(-1);
+    navigate(location);
   };
 
   return (
@@ -17,3 +18,9 @@ const ButtonBack = () => {
 };
 
 export default ButtonBack;
+
+// --------------------------- PropTypes ----------------------
+
+ButtonBack.propTypes = {
+  location: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+};
