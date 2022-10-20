@@ -18,7 +18,7 @@ const Cast = () => {
   }, [movieId]);
 
   return (
-    <>{cast === null ? <b>...loading</b> : <ActorsList actorsArr={cast} />}</>
+    <>{cast === null ? <p>Loading...</p> : <ActorsList actorsArr={cast} />}</>
   );
 };
 

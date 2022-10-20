@@ -1,6 +1,6 @@
 import scss from './ActorsList.module.scss';
 
-import ActorCard from './ActorCard';
+import ActorCard from './ActorCard/ActorCard';
 
 const ActorsList = ({ actorsArr }) => {
   const actorsArrLength = actorsArr.length;

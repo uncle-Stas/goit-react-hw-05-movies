@@ -22,7 +22,7 @@ const Home = () => {
       <Section>
         <h2>Trending today</h2>
         {moviesArr === null ? (
-          <p>...Loading</p>
+          <p>Loading...</p>
         ) : (
           <MoviesList movies={moviesArr} />
         )}

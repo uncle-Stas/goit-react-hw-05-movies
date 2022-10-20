@@ -1,4 +1,4 @@
-//
+import scss from './SearchForm.module.scss';
 
 const SearchForm = ({ onSubmit }) => {
   const handleSubmit = event => {
@@ -18,8 +18,11 @@ const SearchForm = ({ onSubmit }) => {
         autoFocus
         placeholder="Search movie"
         autoComplete="off"
+        className={scss.input}
       />
-      <button type="submit">Search</button>
+      <button type="submit" className={scss.btn}>
+        Search
+      </button>
     </form>
   );
 };

@@ -1,4 +1,5 @@
 .btnBack {
+  padding: 5px 10px;
   margin-bottom: 10px;
   background-color: #01b4e4;
   cursor: pointer;
@@ -7,6 +8,8 @@
   border-radius: 0px 0px 4px 4px;
   border: none;
   color: #ffffff;
+  transition: box-shadow 300ms linear, background-color 300ms linear;
+
   &:hover,
   &:focus {
     background-color: #0096c0;

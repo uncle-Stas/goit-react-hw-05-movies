@@ -18,7 +18,7 @@ const Reviews = () => {
   return (
     <>
       {reviewsArr === null ? (
-        <b>...Loading</b>
+        <p>Loading...</p>
       ) : (
         <ReviewsList reviewsArr={reviewsArr} />
       )}

@@ -1,6 +1,7 @@
 import scss from './MovieInfo.module.scss';
 
 import { Link, Outlet } from 'react-router-dom';
+import { Suspense } from 'react';
 
 const MovieInfo = ({ movie }) => {
   const { title, genres, poster_path, overview, vote_average, release_date } =
@@ -29,16 +30,22 @@ const MovieInfo = ({ movie }) => {
       </div>
       <div className={scss.additionInfo}>
         <h3>Additional information</h3>
-        <ul>
+        <ul className={scss.additionList}>
           <li>
-            <Link to="cast">Cast</Link>
+            <Link to="cast" className={scss.additionLink}>
+              Cast
+            </Link>
           </li>
           <li>
-            <Link to="reviews">Reviews</Link>
+            <Link to="reviews" className={scss.additionLink}>
+              Reviews
+            </Link>
           </li>
         </ul>
       </div>
-      <Outlet />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Outlet />
+      </Suspense>
     </>
   );
 };
