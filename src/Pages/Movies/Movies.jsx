@@ -39,7 +39,7 @@ const Movies = () => {
     <main>
       <Section>
         <>
-          <SearchForm onSubmit={handleSubmit} />
+          <SearchForm onSubmit={handleSubmit} searchParamsQ={searchParamsQ} />
           {moviesArr && <MoviesList movies={moviesArr} query={query} />}
         </>
       </Section>

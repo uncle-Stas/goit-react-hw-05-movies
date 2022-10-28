@@ -40,12 +40,20 @@ const MovieInfo = ({ movie, forBtnBack }) => {
         <h3>Additional information</h3>
         <ul className={scss.additionList}>
           <li>
-            <Link to="cast" className={scss.additionLink}>
+            <Link
+              to="cast"
+              className={scss.additionLink}
+              state={{ from: forBtnBack }}
+            >
               Cast
             </Link>
           </li>
           <li>
-            <Link to="reviews" className={scss.additionLink}>
+            <Link
+              to="reviews"
+              className={scss.additionLink}
+              state={{ from: forBtnBack }}
+            >
               Reviews
             </Link>
           </li>

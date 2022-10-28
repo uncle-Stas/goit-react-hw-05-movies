@@ -30,6 +30,6 @@ ActorCard.propTypes = {
   actor: PropTypes.shape({
     name: PropTypes.string.isRequired,
     profile_path: PropTypes.string,
-    character: PropTypes.string.isRequired,
+    character: PropTypes.string,
   }),
 };

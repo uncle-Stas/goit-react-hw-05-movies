@@ -1,7 +1,7 @@
 import scss from './SearchForm.module.scss';
 import PropTypes from 'prop-types';
 
-const SearchForm = ({ onSubmit }) => {
+const SearchForm = ({ onSubmit, searchParamsQ }) => {
   const handleSubmit = event => {
     event.preventDefault();
 
@@ -16,6 +16,7 @@ const SearchForm = ({ onSubmit }) => {
       <input
         type="text"
         name="query"
+        defaultValue={searchParamsQ}
         autoFocus
         placeholder="Search movie"
         autoComplete="off"
@@ -34,4 +35,5 @@ export default SearchForm;
 
 SearchForm.propTypes = {
   onSubmit: PropTypes.func.isRequired,
+  searchParamsQ: PropTypes.string,
 };
